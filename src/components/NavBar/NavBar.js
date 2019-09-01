@@ -7,7 +7,7 @@ const NavBar = () => {
   return (
     <nav className="navbar navbar-expand-md fixed-top ">
       <ul className="nav">
-        <li class="nav-item">
+        <li className="nav-item">
           <Link
             activeClass="active"
             className="home nav-link"
@@ -19,7 +19,7 @@ const NavBar = () => {
             Home
           </Link>
         </li>
-        <li class="nav-item">
+        <li className="nav-item">
           <Link
             activeClass="active"
             className="about nav-link"
@@ -31,7 +31,7 @@ const NavBar = () => {
             About
           </Link>
         </li>
-        <li class="nav-item">
+        <li className="nav-item">
           <Link
             activeClass="active"
             className="skills nav-link"
@@ -43,7 +43,7 @@ const NavBar = () => {
             Skills
           </Link>
         </li>
-        <li class="nav-item">
+        <li className="nav-item">
           <Link
             activeClass="active"
             className="projects nav-link"
@@ -55,7 +55,7 @@ const NavBar = () => {
             Projects
           </Link>
         </li>
-        <li class="nav-item">
+        <li className="nav-item">
           <Link
             activeClass="active"
             className="contact nav-link"

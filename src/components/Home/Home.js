@@ -11,6 +11,9 @@ import {
 } from "react-scroll";
 
 import NavBar from "../NavBar/NavBar";
+import Main from "../Main/Main";
+import Skills from "../Skills/Skills";
+import Contact from "../Contact/Contact";
 
 const styles = {
   fontFamily: "sans-serif",
@@ -75,15 +78,15 @@ class Home extends React.Component {
         <NavBar />
 
         <Element name="home" className="element">
-          test 1
+          <Main />
         </Element>
 
         <Element name="about" className="element">
-          test 2
+          <Main />
         </Element>
 
         <Element name="skills" className="element">
-          test 3
+          <Skills />
         </Element>
 
         <Element name="projects" className="element">
@@ -91,102 +94,7 @@ class Home extends React.Component {
         </Element>
 
         <Element name="contact" className="element">
-          test 5
-        </Element>
-
-        <div id="anchor" className="element">
-          test 6 (anchor)
-        </div>
-
-        <Link
-          activeClass="active"
-          to="firstInsideContainer"
-          spy={true}
-          smooth={true}
-          duration={250}
-          containerId="containerElement"
-          style={{ display: "inline-block", margin: "20px" }}
-        >
-          Go to first element inside container
-        </Link>
-
-        <Link
-          activeClass="active"
-          to="secondInsideContainer"
-          spy={true}
-          smooth={true}
-          duration={250}
-          containerId="containerElement"
-          style={{ display: "inline-block", margin: "20px" }}
-        >
-          Go to second element inside container
-        </Link>
-
-        <Element
-          name="test7"
-          className="element"
-          id="containerElement"
-          style={{
-            position: "relative",
-            height: "200px",
-            overflow: "scroll",
-            marginBottom: "100px"
-          }}
-        >
-          <Element
-            name="firstInsideContainer"
-            style={{
-              marginBottom: "200px"
-            }}
-          >
-            first element inside container
-          </Element>
-
-          <Element
-            name="secondInsideContainer"
-            style={{
-              marginBottom: "200px"
-            }}
-          >
-            second element inside container
-          </Element>
-        </Element>
-
-        <Element id="same" className="element">
-          Two links point to this
-        </Element>
-
-        <Element name="scroll-to-element" className="element">
-          Scroll to element
-        </Element>
-
-        <Element
-          className="element"
-          id="scroll-container"
-          style={{
-            position: "relative",
-            height: "200px",
-            overflow: "scroll",
-            marginBottom: "100px"
-          }}
-        >
-          <Element
-            name="scroll-container-first-element"
-            style={{
-              marginBottom: "200px"
-            }}
-          >
-            first element inside container
-          </Element>
-
-          <Element
-            name="scroll-container-second-element"
-            style={{
-              marginBottom: "200px"
-            }}
-          >
-            second element inside container
-          </Element>
+          <Contact />
         </Element>
 
         <a onClick={this.scrollToTop}>To the top!</a>

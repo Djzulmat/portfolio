@@ -15,6 +15,7 @@ import { slideInLeft } from "react-animations";
 import NavBar from "../NavBar/NavBar";
 import Main from "../Main/Main";
 import Skills from "../Skills/Skills";
+import Projects from "../Projects/Projects";
 import Contact from "../Contact/Contact";
 
 const styles = {
@@ -115,14 +116,24 @@ class Home extends React.Component {
           </Element>
 
           <Element name="projects" className="element">
-            <Main />
+            <Projects />
           </Element>
 
           <Element name="contact" className="element">
             <Contact />
           </Element>
 
-          <a onClick={this.scrollToTop}>To the top!</a>
+          <a
+            onClick={this.scrollToTop}
+            style={{
+              position: "fixed",
+              cursor: "pointer",
+              bottom: 20,
+              right: 20
+            }}
+          >
+            <i style={{ fontSize: "44px" }} className="fa fa-sort-up"></i>
+          </a>
         </div>
       </StyleRoot>
     );

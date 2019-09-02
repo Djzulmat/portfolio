@@ -43,12 +43,12 @@ class Home extends React.Component {
               </li>
               <li>
                 <a href="tel:4088075583" className="">
-                  <i className="fa fa-phone"></i>408.807.5583
+                  <i className="fa fa-phone"></i>415.509.4061
                 </a>
               </li>
               <li>
                 <a
-                  href="https://www.linkedin.com/in/nickmarazzo"
+                  href="https://www.linkedin.com/in/zafarkaharov/"
                   target="_blank"
                   className=""
                 >
@@ -59,7 +59,7 @@ class Home extends React.Component {
 
               <li>
                 <a
-                  href="https://github.com/nickmarz"
+                  href="https://github.com/Djzulmat"
                   target="_blank"
                   className=""
                 >

@@ -9,6 +9,8 @@ import {
   scrollSpy,
   scroller
 } from "react-scroll";
+import Radium, { StyleRoot } from "radium";
+import { slideInLeft } from "react-animations";
 
 import NavBar from "../NavBar/NavBar";
 import Main from "../Main/Main";
@@ -20,20 +22,38 @@ const styles = {
   textAlign: "center"
 };
 
+const skillAnimation = {
+  animation: {
+    animation: "x 2s",
+    animationName: Radium.keyframes(slideInLeft, "slideInLeft")
+  }
+};
+
 class Home extends React.Component {
   constructor(props) {
     super(props);
+    this.state = {
+      tab: "home"
+    };
     this.scrollToTop = this.scrollToTop.bind(this);
   }
 
   componentDidMount() {
+    const self = this;
+
     Events.scrollEvent.register("begin", function() {
+      self.setState({
+        tab: arguments[0]
+      });
+      console.log(arguments[0]);
       console.log("begin", arguments);
     });
 
     Events.scrollEvent.register("end", function() {
       console.log("end", arguments);
     });
+
+    this.scrollToWithContainer();
   }
   scrollToTop() {
     scroll.scrollToTop();
@@ -73,32 +93,38 @@ class Home extends React.Component {
     Events.scrollEvent.remove("end");
   }
   render() {
+    const { tab } = this.state;
     return (
-      <div>
-        <NavBar />
+      <StyleRoot>
+        <div>
+          <NavBar />
 
-        <Element name="home" className="element">
-          <Main />
-        </Element>
+          <Element name="home" className="element">
+            <Main />
+          </Element>
 
-        <Element name="about" className="element">
-          <Main />
-        </Element>
+          <Element name="about" className="element">
+            <Main />
+          </Element>
 
-        <Element name="skills" className="element">
-          <Skills />
-        </Element>
+          <Element name="skills" className="element">
+            <Skills
+              focused={tab == "skills"}
+              animation={skillAnimation.animation}
+            />
+          </Element>
 
-        <Element name="projects" className="element">
-          test 4
-        </Element>
+          <Element name="projects" className="element">
+            <Main />
+          </Element>
 
-        <Element name="contact" className="element">
-          <Contact />
-        </Element>
+          <Element name="contact" className="element">
+            <Contact />
+          </Element>
 
-        <a onClick={this.scrollToTop}>To the top!</a>
-      </div>
+          <a onClick={this.scrollToTop}>To the top!</a>
+        </div>
+      </StyleRoot>
     );
   }
 }

@@ -1,11 +1,10 @@
 .main {
   padding: 0px;
   box-shadow: 0px 0px 4px grey;
-  background: #beaad8;
+  /* background: #beaad8; */
   justify-content: flex-end;
-
   height: 800px;
-  background: #d4c0ef4f;
+  /* background: #d4c0ef4f; */
 }
 .main .row div {
   height: 700px;
@@ -14,4 +13,10 @@
   padding-top: 200px;
   font-size: 30px;
   color: #908686;
+}
+
+.intro {
+  text-align: center;
+  margin-top: 60px;
+  margin-left: 20px;
 }

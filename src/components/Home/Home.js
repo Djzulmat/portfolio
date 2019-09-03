@@ -14,6 +14,7 @@ import { slideInLeft } from "react-animations";
 
 import NavBar from "../NavBar/NavBar";
 import Main from "../Main/Main";
+import About from "../About/About";
 import Skills from "../Skills/Skills";
 import Projects from "../Projects/Projects";
 import Contact from "../Contact/Contact";
@@ -105,7 +106,7 @@ class Home extends React.Component {
           </Element>
 
           <Element name="about" className="element">
-            <Main />
+            <About />
           </Element>
 
           <Element name="skills" className="element">

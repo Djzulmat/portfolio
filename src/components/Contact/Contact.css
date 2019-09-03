@@ -4,8 +4,7 @@
   box-shadow: 0px 0px 4px grey;
   background: #beaad8;
   justify-content: flex-end;
-
-  height: 300px;
+  height: 600px;
   background: white;
 }
 
@@ -56,4 +55,8 @@ h2 {
   background-color: #e4e4e4;
   margin-bottom: 5px;
   margin-right: 5px;
+}
+
+div.chip {
+  padding-left: 20px;
 }

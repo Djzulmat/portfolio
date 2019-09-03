@@ -21,6 +21,11 @@ const Skills = ({ animation, focused }) => {
             <li>HTML</li>
             <li>CSS</li>
             <li>JavaScript</li>
+            <li>Python3</li>
+            <li>React</li>
+            <li>Django</li>
+            <li>JQuery</li>
+            <li>AJAX</li>
           </ul>
         </div>
       </div>

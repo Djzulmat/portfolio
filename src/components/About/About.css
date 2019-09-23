@@ -7,12 +7,17 @@
   background-repeat: no-repeat;
 }
 
+.about-content h1 {
+  color: black;
+}
+
 .about-content ul {
   font-size: 25px;
-  padding-right: 10px;
+  padding: -5px 5px 0 0;
+  margin-right: 20px;
   text-align: left;
   list-style-type: none;
-  color: black;
+  color: rgb(235, 11, 126);
 }
 
 .about-content .row div {
